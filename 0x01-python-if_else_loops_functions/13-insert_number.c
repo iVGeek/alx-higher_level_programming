@@ -1,42 +1,49 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * insert_node - inserts a number into a sorted singly linked list.
- * @head: list head
- * @number: number to store in the new node
- * Return: pointer to the new node
+ * insert_node - a function
+ * @head: the list head
+ * @number: the number
+ *
+ * Return: adresse or NULL
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-        listint_t *runner;
-        listint_t *new;
+	listint_t *ptr1, *ptr2, *nouveau;
 
-        runner = *head;
+	nouveau = malloc(sizeof(listint_t));
 
-        new = malloc(sizeof(listint_t));
-        if (new == NULL)
-                return (NULL);
-        new->n = number;
+	if (nouveau == NULL)
+		return (NULL);
+	nouveau->n = number;
 
-        if (*head == NULL || (*head)->n > number)
-        {
-                new->next = *head;
-                *head = new;
-                return (new);
-        }
+	if (head == NULL)
+		return (nouveau);
 
-        while (runner->next != NULL)
-        {
-                if ((runner->next)->n >= number)
-                {
-                        new->next = runner->next;
-                        runner->next = new;
-                        return (new);
-                }
-                runner = runner->next;
-        }
+	ptr1 = *head;
+	while ((ptr1->n < number) && ptr1->next != NULL)
+	{
+		ptr2 = ptr1;
+		ptr1 = ptr1->next;
+	}
 
-        new->next = NULL;
-        runner->next = new;
-        return (new);
+	if (ptr1->next == NULL)
+		ptr1->next = nouveau;
+	else if (ptr2 == *head)
+	{
+		if (ptr2->n < nouveau->n)
+			ptr2->next = nouveau;
+		else
+			nouveau->next = ptr2;
+	}
+	else
+	{
+		ptr2->next = nouveau;
+		nouveau->next = ptr1;
+	}
+
+	return (nouveau);
 }
