@@ -1,29 +1,19 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    import sys
+    """Handle arithmetic operations."""
     from calculator_1 import add, sub, mul, div
+    import sys
 
-    def getop(a, op, b):
-        if op == "+":
-            return (add(a, b))
-        if op == "-":
-            return (sub(a, b))
-        if op == "*":
-            return (mul(a, b))
-        if op == "/":
-            return (div(a, b))
-
-    nb = len(sys.argv)
-    arg = sys.argv
-    signe = "-+*/"
-    if nb == 1:
+    if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit(1)
-    if nb == 4:
-        if arg[2] not in signe:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
-        r = getop(int(arg[1]), arg[2], int(arg[3]))
-        print("{} {} {} = {}".format(arg[1], arg[2], arg[3], r))
-        exit(0)
+        sys.exit(1)
+
+    ops = {"+": add, "-": sub, "*": mul, "/": div}
+    if sys.argv[2] not in list(ops.keys()):
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
+
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    print("{} {} {} = {}".format(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
