@@ -1,4 +1,4 @@
-# alx-higher_level_programming :panther:
+# alx-higher_level_programming :☕:
 This repo is just a summary to:
 
 -Why  programming is awesome
