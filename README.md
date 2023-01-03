@@ -4,7 +4,7 @@ This repo is just a summary to:
 -Why  programming is awesome
 
 ### Environment
-* Language: Python, C, BashScript, Brainfuck
+* Language: Python, C, Shell
 * OS: Ubuntu 20.04 LTS
 
 ## Author :🦩:
