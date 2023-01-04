@@ -35,7 +35,7 @@ All your answers should be only one line in a file. No space before or after the
 * Language: Python
 * OS: Ubuntu 20.04 LTS
 
-## CODESMITHE🦊
+## CODESMITH🦊
 
 [GitHub](https://github.com/iVGeek)|iVGeek
 
