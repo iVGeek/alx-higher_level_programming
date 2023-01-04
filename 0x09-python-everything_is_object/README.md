@@ -29,8 +29,6 @@ It’s important that you truly understand the reasons behind the answers of all
 
 Note that during interviews for Python positions, you will most likely have to answer to these type of questions.
 
-All your answers should be only one line in a file. No space before or after the answer.
-
 ### Environment
 * Language: Python
 * OS: Ubuntu 20.04 LTS
