@@ -41,5 +41,5 @@ All your answers should be only one line in a file. No space before or after the
 
 
 ![image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/252/r_208403_QPSN8.jpg)     
-![image](http://gifwarehouse.tumblr.com/post/39183063902)
+![gif](http://gifwarehouse.tumblr.com/post/39183063902)
 
