@@ -1,4 +1,4 @@
-# Welcome to SQL - Introduction 
+# Welcome to SQL - Introduction 💻
 This repo is just a summary to:
 
 What’s a database
