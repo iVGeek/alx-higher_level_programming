@@ -1,20 +1,17 @@
 #!/usr/bin/python3
+# finds peak
+
+
+def search(lo, h, ints):
+    mid = (lo + h) // 2
+    if lo == h:
+        return ints[h]
+    if ints[mid] < ints[mid + 1]:
+        return(search(mid + 1, h, ints))
+    return(search(lo, mid, ints))
+
+
 def find_peak(list_of_integers):
-    """
-    Finds a peak in a list of unsorted integers.
-
-    :param list_of_integers: A list of unsorted integers.
-    :return: A peak in the list of integers.
-    """
-    low = 0
-    high = len(list_of_integers) - 1
-
-    while low < high:
-        mid = (low + high) // 2
-
-        if list_of_integers[mid] > list_of_integers[mid + 1]:
-            high = mid
-        else:
-            low = mid + 1
-
-    return list_of_integers[low]
+    if not list_of_integers:
+        return
+    return(search(0, len(list_of_integers) - 1, list_of_integers))
