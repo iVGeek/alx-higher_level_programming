@@ -6,15 +6,13 @@ def find_peak(list_of_integers):
     :param list_of_integers: A list of unsorted integers.
     :return: A peak in the list of integers.
     """
-    low = 0
-    high = len(list_of_integers) - 1
+    if len(list_of_integers) == 0:
+        return None
 
-    while low < high:
-        mid = (low + high) // 2
+    peak = list_of_integers[0]
 
-        if list_of_integers[mid] > list_of_integers[mid + 1]:
-            high = mid
-        else:
-            low = mid + 1
+    for i in range(1, len(list_of_integers)):
+        if list_of_integers[i] > peak:
+            peak = list_of_integers[i]
 
-    return list_of_integers[low]
+    return peak
