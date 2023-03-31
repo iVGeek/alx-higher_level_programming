@@ -4,7 +4,7 @@ This repo is just a summary to:
 -Why  programming is awesome
 
 ### Environment
-* Language: Python, C, Shell
+* Language: Python, C, Shell, JavaScript
 * OS: Ubuntu 20.04 LTS
 
 ## Author :🦩:
